@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Raleway&family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+body {
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+header{
+    display: flex;
+    margin: 1rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+}
+
+header ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+}
+
+header ul li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+@media only screen and (max-width: 520px) {
+    header{
+        display: flex;
+        height: 8rem;
+        margin: 1.4rem;
+        flex-direction: column;
+        justify-content: space-between;
+        align-content: center;
+    }
+    
+}
+
+/* -> MAIN  <- */
+
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 3rem;
+    align-content: center;
+}
+
+.main-info-side{
+    display: flex;
+    width: 50%;
+    width: 458px;
+    height: 414px;
+    margin-left: 3.5rem;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    align-self: center;
+}
+
+main h1{
+    font-family: 'Poppins', sans-serif;
+    color: #EC4424;
+    font-style: normal;
+    font-size: 69px;
+    line-height: 90px;
+}
+
+.main-subtitle {
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    line-height: 33px;
+}
+
+.main-text{
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    line-height: 28px;
+}
