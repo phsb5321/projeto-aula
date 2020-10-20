@@ -1,23 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Raleway&family=Roboto&display=swap');
-
-*{
+* {
     margin: 0;
     padding: 0;
 }
+
 body::-webkit-scrollbar {
     display: none;
 }
+
 body {
-    -ms-overflow-style: none;  
-    scrollbar-width: none;  
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
-a{
+a {
     text-decoration: none;
     color: inherit;
 }
 
-nav{
+nav {
     display: flex;
     margin: 1rem;
     flex-direction: row;
@@ -25,14 +26,14 @@ nav{
     align-content: center;
 }
 
-nav ul{
+nav ul {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     list-style: none;
 }
 
-nav ul li{
+nav ul li {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -42,7 +43,7 @@ nav ul li{
 }
 
 @media only screen and (max-width: 520px) {
-    nav{
+    nav {
         display: flex;
         height: 8rem;
         margin: 1.4rem;
@@ -50,12 +51,12 @@ nav ul li{
         justify-content: space-between;
         align-content: center;
     }
-    
 }
+
 
 /* -> MAIN  <- */
 
-main{
+main {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -63,7 +64,7 @@ main{
     align-content: center;
 }
 
-.main-info-side{
+.main-info-side {
     display: flex;
     width: 50%;
     width: 458px;
@@ -75,10 +76,11 @@ main{
     align-self: center;
 }
 
-main h1{
+main h1 {
     font-family: 'Poppins', sans-serif;
     color: #EC4424;
     font-style: normal;
+    font-weight: normal;
     font-size: 69px;
     line-height: 90px;
 }
@@ -89,19 +91,140 @@ main h1{
     line-height: 33px;
 }
 
-.main-text{
+.main-text {
     font-family: 'Raleway', sans-serif;
     font-size: 15px;
     line-height: 28px;
 }
 
 @media only screen and (max-width: 1024px) {
-    .main-img{
+    .main-img {
         display: block;
         display: none;
     }
-    .main-info-side{
+    .main-info-side {
         width: 100%;
         margin: 5%;
+    }
+}
+
+
+/* -> SECTION */
+
+section {
+    margin-top: 5rem;
+    margin-bottom: 20rem;
+}
+
+section h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #EC4424;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2.3rem;
+    line-height: 3.2rem;
+    text-align: center;
+}
+
+section p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    text-align: center;
+    margin-bottom: 5rem;
+    margin-top: 2rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    margin: 0;
+    padding: 0;
+    grid-template-areas: "pic1 service2 pic3 service4" "service1 pic2 service3 pic4";
+}
+
+.pic1 {
+    grid-area: pic1;
+}
+
+.service1 {
+    grid-area: service1;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: #EC6348;
+}
+
+.pic2 {
+    grid-area: pic2;
+}
+
+.service2 {
+    grid-area: service2;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: #000000;
+}
+
+.pic3 {
+    grid-area: pic3;
+}
+
+.service3 {
+    grid-area: service3;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: #000000;
+}
+
+.pic4 {
+    grid-area: pic4;
+}
+
+.service4 {
+    grid-area: service4;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: #EC4424;
+}
+
+.section-block {
+    height: 25vw;
+    width: 25vw;
+}
+
+@media only screen and (max-width: 341px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 0px 0px;
+        margin: 0;
+        padding: 0;
+        grid-template-areas: "service1" "pic1" "service2" "pic2" "service3" "pic3" "service4" "pic4";
+    }
+    .section-block {
+        height: 100vw;
+    }
+}
+
+@media only screen and (min-width:342px) and (max-width: 760px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 0px 0px;
+        margin: 0;
+        padding: 0;
+        grid-template-areas: "service1 pic1" "pic2 service2" "service3 pic3" "pic4 service4";
+    }
+    .section-block {
+        height: 50vw;
+        width: 50vw;
     }
 }
